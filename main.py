@@ -58,8 +58,8 @@ def check_word(
     if any(letter in excluded_letters for letter in word):
         return False
 
-    for letter, positions in false_positions.items():
-        if any(word[i] == letter for i in positions):
+    for letter, disallowed_positions in false_positions.items():
+        if any(word[i] == letter for i in disallowed_positions):
             return False
 
     return True
