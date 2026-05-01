@@ -20,9 +20,8 @@ def collect_conditions():
         != ""
     }
 
-    letters_in_true_positions = set(true_positions.values())
     false_positions = {}
-    for letter in conditions["required_letters"] - letters_in_true_positions:
+    for letter in conditions["required_letters"]:
         raw = input(
             f"Enter positions where '{letter}' is NOT (comma-separated, 1-based), or blank: "
         ).strip()
